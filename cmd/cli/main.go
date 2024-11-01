@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	muiscaSrv := services.Service{}
+	muiscaSrv := muiscaServices.Service{}
 
 	getContributorByDocument, err := muiscaSrv.GetContributorByDocument(os.Getenv("DOCUMENT"))
 
