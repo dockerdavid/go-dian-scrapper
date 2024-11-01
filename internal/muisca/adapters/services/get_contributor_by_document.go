@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"errors"
 	"github.com/PuerkitoBio/goquery"
-	muiscaDomain "go-dian-scrapper/internal/muisca/domain"
+	muiscaDomain "github.com/dockerdavid/go-dian-scrapper/internal/muisca/domain"
 	"io"
 	"net/http"
 	"strings"

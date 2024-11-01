@@ -1,4 +1,4 @@
-module go-dian-scrapper
+module github.com/dockerdavid/go-dian-scrapper
 
 go 1.23.2
 
