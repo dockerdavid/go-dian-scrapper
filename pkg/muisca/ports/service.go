@@ -1,7 +1,7 @@
 package muiscaPorts
 
 import (
-	muiscaDomain "github.com/dockerdavid/go-dian-scrapper/internal/muisca/domain"
+	muiscaDomain "github.com/dockerdavid/go-dian-scrapper/pkg/muisca/domain"
 )
 
 type Service interface {

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dockerdavid/go-dian-scrapper/internal/muisca/adapters/services"
+	"github.com/dockerdavid/go-dian-scrapper/pkg/muisca/adapters/services"
 	_ "github.com/joho/godotenv/autoload"
 	"os"
 )
