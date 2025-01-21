@@ -11,6 +11,7 @@ const (
 
 type Result struct {
 	NIT             string
+	DV              string
 	State           string
 	ContributorType string
 	NaturalPerson   NaturalPerson

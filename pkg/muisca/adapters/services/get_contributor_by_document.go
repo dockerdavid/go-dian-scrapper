@@ -58,13 +58,15 @@ func (s Service) GetContributorByDocument(document string) (*muiscaDomain.Result
 	}
 
 	var tipo string
-	var razonSocial, estado, primerApellido, segundoApellido, primerNombre, otrosNombres string
+	var razonSocial, estado, primerApellido, segundoApellido, primerNombre, otrosNombres, dv string
 
 	var table = doc.Find("table.muisca_area")
 
 	if table.Length() == 0 {
 		return nil, ErrNoResults
 	}
+
+	dv = table.Find("#vistaConsultaEstadoRUT\\:formConsultaEstadoRUT\\:dv").Text()
 
 	if table.Find("span#vistaConsultaEstadoRUT\\:formConsultaEstadoRUT\\:razonSocial").Length() > 0 {
 		tipo = muiscaDomain.JuridicalPersonType
@@ -89,6 +91,7 @@ func (s Service) GetContributorByDocument(document string) (*muiscaDomain.Result
 
 	var result = muiscaDomain.Result{
 		NIT:             document,
+		DV:              dv,
 		State:           estado,
 		ContributorType: tipo,
 		NaturalPerson: muiscaDomain.NaturalPerson{
